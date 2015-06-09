@@ -5,12 +5,24 @@
 		float: right;
 	}
 }
+@media screen and (min-device-width: 1200px) {
+	.carousel-caption {
+		left: 10%
+	}
+}
 @media screen and (max-device-width: 1024px) {
-	.navbar-nav > li > a {
-		padding: 35px 10px 38px
+	.navbar-nav {
+		li {
+			a {
+				padding: 35px 10px 38px
+			}
+		}
 	}
 	.carousel-caption {
 		bottom: 130px
+	}
+	.carousel-caption {
+		left:10%;
 	}
 }
 
@@ -26,14 +38,18 @@
 
 
 	/* Hiding navigation bar */
+
 	.navbar-header{
 		width: 100%
 	}
-	.nav-wrapper .navbar-collapse.collapse {
-		display: none;
+	.nav-wrapper {
+		.navbar-collapse.collapse {
+			display: none;
+		}
 	}
 	.navbar-toggle {
 		display: block;
+		margin-top:32px
 	}
 
 	.navbar-wrapper{
@@ -44,85 +60,139 @@
 		background: transparent;
 	}
 
+	/*Custom Carousel*/
+	.glyphicon-chevron-right::before, .glyphicon-chevron-left::before {
+		background-size: 50%
+	}
 	.carousel-caption {
 		bottom: 90px;
 	    height: 200px;
 	    width: 80%;
 	}
-	.carousel-caption h1{
-		font-size: 24px;
-    	line-height: 40px;
+	.carousel-caption {
+		h1{
+			font-size: 24px;
+	    	line-height: 40px;
+		}
 	}
-	.carousel-caption h1 p {
-		font-size: 32px;
+	.carousel-caption {
+		h1 {
+			p {
+				font-size: 32px;
+			}
+		}
 	}
 }
 
 @media screen and (max-device-width:640px){
 
-	.navbar-toggle {
-		margin-top: 30px
-	}
 	.navbar-header:after{
 		display: block;
 		content: '';
 		clear: both;
 	}
 
-	.navbar-nav > li > a {
-		padding: 12px 20px;
-		border:none;
+	.navbar-nav {
+		li {
+			a {
+				padding: 12px 20px;
+				border:none;
+			}
+		}
 	}
-	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-		background-color:rgba(255,255,255,0.2);
+	.navbar-default {
+		.navbar-nav {
+			li {
+				a:hover{
+					border-color: rgba(255,255,255,0.2);
+				}
+			}
+			.active {
+				a,a:hover, a:focus {
+					border-color: rgba(255,255,255,0.2);
+				}
+			}
+		}
 	}
+
 	.navbar-scroll .navbar-brand *{
-		color: #fff
+		color: @inverttextColor
 	}
-	.navbar-scroll.navbar-default .navbar-nav > li > a, .navbar-scroll.navbar-default .navbar-nav > .active > a, .navbar-scroll.navbar-default .navbar-nav > .active > a:hover, .navbar-scroll.navbar-default .navbar-nav > .active > a:focus {
-		color: #fff
+	.navbar-scroll.navbar-default {
+		.navbar-nav {
+			li {
+				a{
+					color: @inverttextColor
+				}
+			}
+			.active {
+				a,a:hover, a:focus {
+					color: @inverttextColor
+				}
+			}
+		}
 	}
-
-
-
 	.carousel-caption {
 	    bottom: 80px;
 	    height: 140px;
+	    width: 70%;
 	}
-	.carousel-caption h1 {
-	    font-size: 18px;
-	    line-height: 30px;
-	    margin: 0
+	.carousel-caption {
+		h1 {
+		    font-size: 18px;
+		    line-height: 30px;
+		    margin: 0
+		}
 	}
-	.carousel-caption h1 p {
-	    font-size: 24px;
+	.carousel-caption {
+		h1 {
+			p {
+			    font-size: 24px;
+			}
+		}
 	}
 }
 
 @media screen and (max-device-width:480px){
-	.navbar-brand .brand a {
-		font-size: 24px
+	.navbar-brand {
+		.brand {
+			a {
+				font-size: 24px
+			}
+		}
 	}
 	.carousel-caption {
 	    bottom: 40px;
 	}
-	.carousel-caption h1 {
-		font-size: 18px;
-	    line-height: 28px;
+	.carousel-caption {
+		h1 {
+			font-size: 18px;
+		    line-height: 28px;
+		}
 	}
-	.carousel-caption h1 p {
-	    font-size: 22px;
+	.carousel-caption {
+		h1 {
+			p {
+			    font-size: 22px;
+			}
+		}
 	}
 }
-@media screen and (max-device-width:320px){
+@media screen and (max-device-width:360px){
 	.carousel-caption {
 	    bottom: 10px;
 	}
-	.carousel-caption h1 {
-	    font-size: 14px;
-	    line-height: 24px;
+	.carousel-caption {
+		h1 {
+		    font-size: 14px;
+		    line-height: 24px;
+		}
 	}
-	.carousel-caption h1 p {
-	    font-size: 22px;
+	.carousel-caption {
+		h1 {
+			p {
+			    font-size: 22px;
+			}
+		}
 	}
 }
