@@ -1,6 +1,12 @@
 /* GENERIC RULES */
+@latoFontfamily:'Lato', sans-serif;
+@textColor: #3c3c3c;
+@inverttextColor: #fff;
+@buttonColor: #d70000;
+
+
 body{
-	font-family: 'Lato', sans-serif;
+	font-family: @latoFontfamily
 }
 
 a:hover{
@@ -12,13 +18,13 @@ a:hover{
 	padding:10px 20px;
 }
 .btn-default {
-	border: solid 1px #d70000;
-	color: #d70000
+	border: solid 1px @buttonColor;
+	color: @buttonColor
 }
 .btn-default:hover{
-	background: #d70000;
-	color: #fff;
-	border-color:#d70000;
+	background: @buttonColor;
+	color: @inverttextColor;
+	border-color:@buttonColor;
 }
 
 .form-control{
@@ -33,6 +39,7 @@ a:hover{
 .contact-form textarea.form-control{
 	height: 200px
 }
+
 /* CUSTOM FONT FACE */
 @font-face {
   font-family: 'ArnoProCaption';
@@ -45,55 +52,90 @@ a:hover{
 .navbar-brand{
 	height: auto;
 }
-.navbar-brand a{
-	color: #fff
+.navbar-brand{
+	a{
+		color: @inverttextColor
+	}
 }
-.navbar-scroll .navbar-brand *{
-	color: #3c3c3c
+.navbar-scroll {
+	.navbar-brand *{
+		color: @textColor
+	}
 }
-.navbar-brand .brand a{
-	font-family: 'ArnoProCaption';
-	font-size: 31px;
-	margin-top: 20px;
-	display: block
+.navbar-brand {
+	.brand {
+		a{
+			font-family: 'ArnoProCaption';
+			font-size: 31px;
+			margin-top: 20px;
+			display: block
+		}
+	}
 }
 
-.navbar-brand .sub-brand {
-	text-align: center;
-	font-family: 'Lato', sans-serif;
-	font-size: 12px;
+.navbar-brand {
+	.sub-brand {
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-size: 12px;
+	}
 }
+
 .sub-brand:after {
 	content: '';
 	display: block;
 	clear: both;
 }
-.navbar-brand .sub-brand a{
-	display: inline-block;
-	padding: 0 10px;
-	letter-spacing: 0.2em;
+.navbar-brand {
+	.sub-brand {
+		a{
+			display: inline-block;
+			padding: 0 10px;
+			letter-spacing: 0.2em;
+		}
+	}
+}
+.navbar-scroll.navbar-default {
+	.navbar-nav {
+		li {
+			a{
+				color: @textColor
+			}
+		}
+		.active {
+			a,a:hover, a:focus {
+				color: @textColor
+			}
+		}
+	}
+}
+.navbar-nav {
+	li {
+		a {
+			padding:35px 15px 38px;
+			border-top: solid 3px transparent;
+		}
+	} 
+} 
+
+.navbar-default {
+	.navbar-nav {
+		li {
+			a:hover{
+				border-color: @buttonColor;
+			}
+		}
+		.active {
+			a,a:hover, a:focus {
+				border-color: @buttonColor;
+			}
+		}
+	}
 }
 
-.navbar-scroll.navbar-default .navbar-nav > li > a, 
-.navbar-scroll.navbar-default .navbar-nav > .active > a, 
-.navbar-scroll.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-scroll.navbar-default .navbar-nav > .active > a:focus {
-	color: #3c3c3c
-}
-
-.navbar-nav > li > a {
-	padding:35px 15px 38px;
-	border-top: solid 3px transparent;
-}
-.navbar-default .navbar-nav > li > a:hover, 
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-	border-color: #ce042e;
-}
 .navbar-default {
 	transition: background-color 0.5s ease;
 }
 .navbar-scroll {
-	background-color: #fff; 
+	background-color: @inverttextColor; 
 }
