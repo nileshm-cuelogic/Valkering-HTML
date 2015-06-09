@@ -1,0 +1,99 @@
+/* GENERIC RULES */
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+a:hover{
+	text-decoration: none;
+}
+.btn {
+	border-radius: 0;
+	text-transform: uppercase;
+	padding:10px 20px;
+}
+.btn-default {
+	border: solid 1px #d70000;
+	color: #d70000
+}
+.btn-default:hover{
+	background: #d70000;
+	color: #fff;
+	border-color:#d70000;
+}
+
+.form-control{
+	padding: 10px 20px;
+	border-radius:0;
+	height: 50px
+}
+.contact-form .btn{
+	width: 100%;
+	height: 50px
+}
+.contact-form textarea.form-control{
+	height: 200px
+}
+/* CUSTOM FONT FACE */
+@font-face {
+  font-family: 'ArnoProCaption';
+  src: url('../fonts/ArnoProCaption.eot');
+  src: url('../fonts/ArnoProCaption.eot?#iefix') format('embedded-opentype'), url('../fonts/ArnoProCaption.woff2') format('woff2'), url('../fonts/ArnoProCaption.woff') format('woff'), url('../fonts/ArnoProCaption.ttf') format('truetype'), url('../fonts/ArnoProCaption.svg#ArnoProCaption') format('svg');
+}
+
+
+/* NAVBAR CUSTOMIZATION */
+.navbar-brand{
+	height: auto;
+}
+.navbar-brand a{
+	color: #fff
+}
+.navbar-scroll .navbar-brand *{
+	color: #3c3c3c
+}
+.navbar-brand .brand a{
+	font-family: 'ArnoProCaption';
+	font-size: 31px;
+	margin-top: 20px;
+	display: block
+}
+
+.navbar-brand .sub-brand {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+}
+.sub-brand:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.navbar-brand .sub-brand a{
+	display: inline-block;
+	padding: 0 10px;
+	letter-spacing: 0.2em;
+}
+
+.navbar-scroll.navbar-default .navbar-nav > li > a, 
+.navbar-scroll.navbar-default .navbar-nav > .active > a, 
+.navbar-scroll.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-scroll.navbar-default .navbar-nav > .active > a:focus {
+	color: #3c3c3c
+}
+
+.navbar-nav > li > a {
+	padding:35px 15px 38px;
+	border-top: solid 3px transparent;
+}
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+	border-color: #ce042e;
+}
+.navbar-default {
+	transition: background-color 0.5s ease;
+}
+.navbar-scroll {
+	background-color: #fff; 
+}
